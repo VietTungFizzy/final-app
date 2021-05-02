@@ -1,4 +1,4 @@
-.page .theme  {
+.page .navbar-theme  {
 	background-color: #266dbf;
 	/*height: 50px;*/
 }
@@ -9,4 +9,26 @@
 
 .page #profile {
 	width: 70%
+}
+
+.page .content-theme {
+	background-color: #dddddd;
+}
+
+.page #feeds-discovery .active {
+	color: #266dbf;
+	font-weight: bold;
+}
+
+.page #modes .btn-default {
+	color: #266dbf;
+}
+
+.page #modes .active {
+	color: white;
+	background-color: #266dbf;
+}
+
+.page .content .row .card {
+	max-width: 610px;
 }
