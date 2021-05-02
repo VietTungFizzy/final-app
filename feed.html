@@ -7,12 +7,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/css/all.css">
     <link rel="stylesheet" href="style.css">
-
     <title>Feed</title>
   </head>
   <body>
-    <div id="page" class="page">
+    <div id="feeds-page" class="feeds-page">
       <div class="container-fluid navbar-theme">
         <div class="navbar navbar-expand-lg">
           <a class="navbar-brand text-white font-weight-bold ml-5" href="#">Fotobook</a>
@@ -41,35 +41,85 @@
           <div class="col-8 bg-white">
             <div class="w-100 text-center">
               <div class="pt-2 btn-group" role="group" id="modes">
-                <button type="button" class="btn btn-default border border-secondary font-weight-bold active">PHOTO</button>
-                <button type="button" class="btn btn-default border border-secondary font-weight-bold">ALBUM</button>
+                <button type="button" class="btn text-blue-facebook border border-secondary font-weight-bold active">PHOTO</button>
+                <button type="button" class="btn text-blue-facebook border border-secondary font-weight-bold">ALBUM</button>
               </div>
             </div>
             <div class="row">
-              <div class="card col-6 m-2">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="woman-5587219_640.jpg" class="card-img" alt="example image">
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <div class="col-6">
+                <div class="card mt-2">
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="woman-5587219_640.jpg" class="card-img" alt="example image">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <div class="card-title">
+                          <img src="HN-avatar.png" width="50px" height="50px" class="rounded-circle">
+                          <span class="text-blue-facebook font-weight-bold ml-2">Hieu Nguyen</span>  
+                        </div>
+                        <h5 class="card-title font-weight-bold">Nam tempor posuere faucibus</h5>
+                        <p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
+                        <div class="d-flex justify-content-between">
+                          <div class="card-text">
+                            <i class="fas fa-heart text-blue-facebook"></i>
+                            <span class="text-blue-facebook">123</span>  
+                          </div>
+                          <p class="card-text"><small class="text-muted">4:56 pm 01/04/2018</small></p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card col-6 m-2">
-                <div class="row no-gutters">
-                  <div class="col-md-4">
-                    <img src="woman-5587219_640.jpg" class="card-img" alt="example image">
+              <div class="col-6">
+                <div class="card mt-2">
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="woman-5587219_640.jpg" class="card-img" alt="example image">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <div class="card-title">
+                          <img src="HN-avatar.png" width="50px" height="50px" class="rounded-circle">
+                          <span class="text-blue-facebook font-weight-bold ml-2">Hieu Nguyen</span>  
+                        </div>
+                        <h5 class="card-title font-weight-bold">Nam tempor posuere faucibus</h5>
+                        <p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
+                        <div class="d-flex justify-content-between">
+                          <div class="card-text">
+                            <i class="fas fa-heart text-blue-facebook"></i>
+                            <span class="text-blue-facebook">123</span>  
+                          </div>
+                          <p class="card-text"><small class="text-muted">4:56 pm 01/04/2018</small></p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card mt-2">
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="woman-5587219_640.jpg" class="card-img" alt="example image">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <div class="card-title">
+                          <img src="HN-avatar.png" width="50px" height="50px" class="rounded-circle">
+                          <span class="text-blue-facebook font-weight-bold ml-2">Hieu Nguyen</span>  
+                        </div>
+                        <h5 class="card-title font-weight-bold">Nam tempor posuere faucibus</h5>
+                        <p class="card-text">Aliquam dictum nec massa ac consequat. Etiam dignissim tincidunt tellus sed vestibulum. Sed vitae vestibulum purus. Curabitur malesuada libero in nibh pretium, sed malesuada nisi feugiat.</p>
+                        <div class="d-flex justify-content-between">
+                          <div class="card-text">
+                            <i class="fas fa-heart text-blue-facebook"></i>
+                            <span class="text-blue-facebook">123</span>  
+                          </div>
+                          <p class="card-text"><small class="text-muted">4:56 pm 01/04/2018</small></p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

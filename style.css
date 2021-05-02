@@ -1,34 +1,30 @@
-.page .navbar-theme  {
+.feeds-page .navbar-theme  {
 	background-color: #266dbf;
 	/*height: 50px;*/
 }
 
-.page #form-seach {
+.feeds-page .text-blue-facebook {
+	color: #266dbf;
+}
+
+.feeds-page #form-seach {
 	width: 30%;
 }
 
-.page #profile {
+.feeds-page #profile {
 	width: 70%
 }
 
-.page .content-theme {
+.feeds-page .content-theme {
 	background-color: #dddddd;
 }
 
-.page #feeds-discovery .active {
+.feeds-page #feeds-discovery .active {
 	color: #266dbf;
 	font-weight: bold;
 }
 
-.page #modes .btn-default {
-	color: #266dbf;
-}
-
-.page #modes .active {
+.feeds-page #modes .active {
 	color: white;
 	background-color: #266dbf;
-}
-
-.page .content .row .card {
-	max-width: 610px;
 }
