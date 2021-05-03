@@ -12,7 +12,7 @@
     <title>Fotobook</title>
   </head>
   <body>
-    <div id="public-profile-tab-photos-page" class="public-profile-tab-photos-page">
+    <div id="my-profile-tab-photos-page" class="my-profile-tab-photos-page">
       <div class="container-fluid navbar-theme">
         <div class="navbar navbar-expand-lg">
           <a class="navbar-brand text-white font-weight-bold ml-5" href="#">Fotobook</a>
@@ -39,10 +39,10 @@
             </div>
           </div>
           <div class="col-8 bg-white pl-4">
-            <div class="d-flex profile" id="current-user">
+            <div class="d-flex profile">
               <img src="external-content.duckduckgo.com.jpg" class="rounded-circle" width="150px" height="150px">
               <div class="d-flex flex-column ml-3">
-                <button type="button" class=" btn border border-orange rounded-pill font-weight-bold" onclick="follow('current-user')">Follow</button>
+                <button type="button" class=" btn rounded-pill font-weight-bold edit-profile-btn">Edit Profile</button>
                 <h1 class="font-weight-bold">Hansford Nguyen</h1>
                 <div class="d-flex stats">
                   <span class="active">108 <small class="active">PHOTOS</small></span>
@@ -55,38 +55,60 @@
                 </div>
               </div>
             </div>
+            <div class="add-photo-div">
+              <button type="button" class="btn btn-success float-right">Add Photos</button>
+            </div>
             <div class="row">
-              <div class="col-3 pt-3 text-center" id="post-1">
-                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
-                <p>title</p>
+              <div class="col-3 mt-3 text-center" id="post-1">
+                <div class="card mt-3 border-0">
+                  <img src="woman-5587219_640.jpg" class="img" alt="image">
+                  <div class="card-img-overlay private-icon d-flex justify-content-center align-items-center">
+                    <i class="fas fa-lock"></i>
+                  </div>
+                  <p>title</p>
+                </div>
               </div>
-              <div class="col-3 pt-3 text-center" id="post-2">
-                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
-                <p>title</p>
+              <div class="col-3 mt-3 text-center" id="post-2">
+                <div class="card mt-3 border-0">
+                  <img src="woman-5587219_640.jpg" class="img" alt="image" >
+                  <p>title</p>
+                </div>
               </div>
-              <div class="col-3 pt-3 text-center" id="post-3 pt-3">
-                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
-                <p>title</p>
+              <div class="col-3 mt-3 text-center" id="post-3">
+                <div class="card mt-3 border-0">
+                  <img src="woman-5587219_640.jpg" class="img" alt="image">
+                  <p>title</p>
+                </div>
               </div>
-              <div class="col-3 pt-3 text-center" id="post-4">
-                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
-                <p>title</p>
+              <div class="col-3 mt-3 text-center" id="post-4">
+                <div class="card mt-3 border-0">
+                  <img src="woman-5587219_640.jpg" class="img" alt="image">
+                  <p>title</p>
+                </div>
               </div>
-              <div class="col-3 pt-3 text-center" id="post-5">
-                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
-                <p>title</p>
+              <div class="col-3 mt-3 text-center" id="post-5">
+                <div class="card mt-3 border-0">
+                  <img src="woman-5587219_640.jpg" class="img" alt="image">
+                  <p>title</p>
+                </div>
               </div>
-              <div class="col-3 pt-3 text-center" id="post-6">
-                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
-                <p>title</p>
+              <div class="col-3 mt-3 text-center" id="post-6">
+                <div class="card mt-3 border-0">
+                  <img src="woman-5587219_640.jpg" class="img" alt="image">
+                  <p>title</p>
+                </div>
               </div>
-              <div class="col-3 pt-3 text-center" id="post-7">
-                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
-                <p>title</p>
+              <div class="col-3 mt-3 text-center" id="post-7">
+                <div class="card mt-3 border-0">
+                  <img src="woman-5587219_640.jpg" class="img" alt="image">
+                  <p>title</p>
+                </div>
               </div>
-              <div class="col-3 pt-3 text-center" id="post-8">
-                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
-                <p>title</p>
+              <div class="col-3 mt-3 text-center" id="post-8">
+                <div class="card mt-3 border-0">
+                  <img src="woman-5587219_640.jpg" class="img" alt="image">
+                  <p>title</p>
+                </div>
               </div>
             </div>
           </div>

@@ -39,10 +39,10 @@ base.html<!doctype html>
             </div>
           </div>
           <div class="col-8 bg-white">
-            <div class="d-flex profile">
+            <div class="d-flex profile" id="current-user">
               <img src="external-content.duckduckgo.com.jpg" class="rounded-circle" width="150px" height="150px">
               <div class="d-flex flex-column ml-3">
-                <button type="button" class=" btn border border-orange rounded-pill font-weight-bold" onclick="follow()">Follow</button>
+                <button type="button" class=" btn border-orange rounded-pill font-weight-bold" onclick="follow('current-user')">Follow</button>
                 <h1 class="font-weight-bold">Hansford Nguyen</h1>
                 <div class="d-flex stats">
                   <span>108 <small>PHOTOS</small></span>
@@ -52,6 +52,76 @@ base.html<!doctype html>
                   <span>22 <small>FOLLOWINGS</small></span>
                   <span class="mx-2">|</span>
                   <span class="active">13 <small class="active">FOLLOWERS</small></span>  
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3" id="user-1">
+                <div class="shadow-sm card text-center content-theme">
+                  <div class="my-2">
+                    <img src="external-content.duckduckgo.com.jpg" class="rounded-circle" width="150px" height="150px">
+                  </div>
+                  <div class="my-2">
+                    Hieu Nguyen
+                  </div>
+                  <div class="d-flex justify-content-around my-2">
+                    <h5>22<br><small>PHOTOS</small></h5>
+                    <h5>105<br><small>ALBUMS</small></h5>
+                  </div>
+                  <div class="my-2">
+                    <button type="button" class=" btn border-orange rounded-pill font-weight-bold" onclick="follow('user-1')">Follow</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3" id="user-2">
+                  <div class="shadow-sm card text-center content-theme">
+                  <div class="my-2">
+                    <img src="external-content.duckduckgo.com.jpg" class="rounded-circle" width="150px" height="150px">
+                  </div>
+                  <div class="my-2">
+                    Hieu Nguyen
+                  </div>
+                  <div class="d-flex justify-content-around my-2">
+                    <h5>22<br><small>PHOTOS</small></h5>
+                    <h5>105<br><small>ALBUMS</small></h5>
+                  </div>
+                  <div class="my-2">
+                    <button type="button" class=" btn border-orange rounded-pill font-weight-bold" onclick="follow('user-2')">Follow</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3" id="user-3">
+                  <div class="shadow-sm card text-center content-theme">
+                  <div class="my-2">
+                    <img src="external-content.duckduckgo.com.jpg" class="rounded-circle" width="150px" height="150px">
+                  </div>
+                  <div class="my-2">
+                    Hieu Nguyen
+                  </div>
+                  <div class="d-flex justify-content-around my-2">
+                    <h5>22<br><small>PHOTOS</small></h5>
+                    <h5>105<br><small>ALBUMS</small></h5>
+                  </div>
+                  <div class="my-2">
+                    <button type="button" class=" btn border-orange rounded-pill font-weight-bold" onclick="follow('user-3')">Follow</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3" id="user-4">
+                  <div class="shadow-sm card text-center content-theme">
+                  <div class="my-2">
+                    <img src="external-content.duckduckgo.com.jpg" class="rounded-circle" width="150px" height="150px">
+                  </div>
+                  <div class="my-2">
+                    Hieu Nguyen
+                  </div>
+                  <div class="d-flex justify-content-around my-2">
+                    <h5>22<br><small>PHOTOS</small></h5>
+                    <h5>105<br><small>ALBUMS</small></h5>
+                  </div>
+                  <div class="my-2">
+                    <button type="button" class=" btn border-orange rounded-pill font-weight-bold" onclick="follow('user-4')">Follow</button>
+                  </div>
                 </div>
               </div>
             </div>

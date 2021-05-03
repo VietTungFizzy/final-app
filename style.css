@@ -21,7 +21,7 @@
 
 .border-orange {
 	width: 110px;
-	border-color: #cc8408 !important;
+	border: 3px solid #cc8408;
 }
 
 .border-orange.active {
@@ -73,7 +73,27 @@
 	padding-top: 50px;
 }
 
-.public-profile-tab-photos-page .img {
+.edit-profile-btn {
+	border: 3px solid #266dbf;
+	color: #266dbf;
+	width: 150px;
+}
+
+.add-photo-div {
+	height: 40px;
+}
+
+.private-icon {
+	width: 32px;
+	height: 32px;
+	background-color: white;
+	border-radius: 50%;
+	left: 85%;
+	top: 5px;
+}
+
+.public-profile-tab-photos-page .img,
+.my-profile-tab-photos-page .img {
 	max-height: 300px;
 	max-width: 300px;
 	height: 100%;
@@ -97,4 +117,13 @@
 
 .public-profile-tab-photos-page .album-description small {
 	font-size: 15px;
+}
+
+.public-profile-tab-follower-page .card h5 {
+	color: #266dbf;
+	font-weight: bold;
+}
+
+.public-profile-tab-follower-page .card small {
+	color: #266dbf;
 }
