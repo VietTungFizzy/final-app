@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Fotobook</title>
+  </head>
+  <body>
+    <div id="public-profile-tab-photos-page" class="public-profile-tab-photos-page">
+      <div class="container-fluid navbar-theme">
+        <div class="navbar navbar-expand-lg">
+          <a class="navbar-brand text-white font-weight-bold ml-5" href="#">Fotobook</a>
+          <form class="form-inline" id="form-seach">
+            <input class="form-control w-100" type="search" id="search" name="search" placeholder="Search Photo/ Album">
+          </form>
+          <div class="collapse navbar-collapse row">
+            <div class="col-9 text-right">
+              <img src="external-content.duckduckgo.com.jpg" class="rounded-circle" width="50px" height="50px">
+              <span class="h5 text-white font-weight-bold ml-2">Hieu Nguyen</span>
+            </div>
+            <div class=" col-3 text-center">
+              <button type="button" class="btn text-white font-weight-bold">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid content content-theme vw-100 vh-100 pt-2">
+        <div class="row h-100">
+          <div class="col-2 text-center">
+            <div class="list-group" id="feeds-discovery">
+              <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Feeds</a>
+              <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 active">Discovery</a>
+            </div>
+          </div>
+          <div class="col-8 bg-white pl-4">
+            <div class="d-flex profile">
+              <img src="external-content.duckduckgo.com.jpg" class="rounded-circle" width="150px" height="150px">
+              <div class="d-flex flex-column ml-3">
+                <button type="button" class=" btn border border-orange rounded-pill font-weight-bold" onclick="follow()">Follow</button>
+                <h1 class="font-weight-bold">Hansford Nguyen</h1>
+                <div class="d-flex stats">
+                  <span class="active">108 <small class="active">PHOTOS</small></span>
+                  <span class="mx-2">|</span>
+                  <span>43 <small>ALBUMS</small></span>
+                  <span class="mx-2">|</span>
+                  <span>22 <small>FOLLOWINGS</small></span>
+                  <span class="mx-2">|</span>
+                  <span>13 <small>FOLLOWERS</small></span>  
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3 pt-3 text-center" id="post-1">
+                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
+                <p>title</p>
+              </div>
+              <div class="col-3 pt-3 text-center" id="post-2">
+                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
+                <p>title</p>
+              </div>
+              <div class="col-3 pt-3 text-center" id="post-3 pt-3">
+                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
+                <p>title</p>
+              </div>
+              <div class="col-3 pt-3 text-center" id="post-4">
+                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
+                <p>title</p>
+              </div>
+              <div class="col-3 pt-3 text-center" id="post-5">
+                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
+                <p>title</p>
+              </div>
+              <div class="col-3 pt-3 text-center" id="post-6">
+                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
+                <p>title</p>
+              </div>
+              <div class="col-3 pt-3 text-center" id="post-7">
+                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
+                <p>title</p>
+              </div>
+              <div class="col-3 pt-3 text-center" id="post-8">
+                <img src="woman-5587219_640.jpg" class="img" alt="image" width="150px" height="150px">
+                <p>title</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>  
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="public-profile-script.js"></script>
+  </body>
+</html>

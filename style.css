@@ -20,7 +20,7 @@
 }
 
 .border-orange {
-	width: 100px;
+	width: 110px;
 	border-color: #cc8408 !important;
 }
 
@@ -30,30 +30,71 @@
 	background-color: #f4a418;
 }
 
-.feeds-page #feeds-discovery .active,
-.feeds-album-page #feeds-discovery .active,
-.discovery-page #feeds-discovery .active {
+#feeds-discovery .active,
+.profile .stats .active {
 	color: #266dbf;
 	font-weight: bold;
 }
 
-.feeds-page #modes .active,
-.feeds-album-page #modes .active,
-.discovery-page #modes .active {
+#modes .active {
 	color: white;
 	background-color: #266dbf;
 }
 
-.feeds-album-page .image-stacked {
+.image-stacked {
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	max-height: 100%;
 }
 
-.feeds-album-page .image-stacked:nth-child(1) {
-	transform: rotate(10deg)
+.image-stacked:nth-child(1) {
+	transform: rotate(8deg)
 }
-.feeds-album-page .image-stacked:nth-child(2) {
+
+.image-stacked:nth-child(2) {
 	transform: rotate(5deg)
+}
+
+.image-stacked:last-child {
+	position: relative;
+}
+
+.profile span {
+	font-size: 25px;
+}
+
+.profile small {
+	font-size: 14px;
+}
+
+.profile {
+	padding-left: 30px;
+	padding-top: 50px;
+}
+
+.public-profile-tab-photos-page .img {
+	max-height: 300px;
+	max-width: 300px;
+	height: 100%;
+	width: 100%;
+}
+
+.public-profile-tab-photos-page .album-description {
+	width: 110px;
+	height: 110px;
+	background-color: rgba(79,80,84,0.6);
+	border-radius: 50%;
+	top: 30%;
+	left: 35%;
+	color: white;
+}
+
+.public-profile-tab-photos-page .album-description h5 {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.public-profile-tab-photos-page .album-description small {
+	font-size: 15px;
 }
