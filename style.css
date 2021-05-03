@@ -31,13 +31,29 @@
 }
 
 .feeds-page #feeds-discovery .active,
+.feeds-album-page #feeds-discovery .active,
 .discovery-page #feeds-discovery .active {
 	color: #266dbf;
 	font-weight: bold;
 }
 
 .feeds-page #modes .active,
+.feeds-album-page #modes .active,
 .discovery-page #modes .active {
 	color: white;
 	background-color: #266dbf;
+}
+
+.feeds-album-page .image-stacked {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	max-height: 100%;
+}
+
+.feeds-album-page .image-stacked:nth-child(1) {
+	transform: rotate(10deg)
+}
+.feeds-album-page .image-stacked:nth-child(2) {
+	transform: rotate(5deg)
 }
