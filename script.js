@@ -3,12 +3,24 @@ $(function() {
 })
 
 function like(data) {
-	const iconElement = ".feeds-page #" + data + " i"
-	if($(iconElement).hasClass("fas fa-heart text-blue-facebook")) {
-			$(iconElement).removeClass("fas fa-heart text-blue-facebook").addClass("far fa-heart text-blue-facebook")	
+	const iconElement = "#" + data + " i"
+	if($(iconElement).hasClass("fas")) {
+			$(iconElement).removeClass("fas").addClass("far")	
 		}
 		else {
-			$(iconElement).removeClass("far fa-heart text-blue-facebook").addClass("fas fa-heart text-blue-facebook")	
+			$(iconElement).removeClass("far").addClass("fas")	
+		}
+}
+
+function follow(data) {
+	const btnElement = "#" + data + " .border-orange"
+	if($(btnElement).hasClass("active")) {
+			$(btnElement).removeClass("active")
+			$(btnElement).text("Follow")
+		}
+		else {
+			$(btnElement).addClass("active")
+			$(btnElement).text("Following")
 		}
 }
 

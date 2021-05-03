@@ -1,30 +1,43 @@
-.feeds-page .navbar-theme  {
+.navbar-theme  {
 	background-color: #266dbf;
 	/*height: 50px;*/
 }
 
-.feeds-page .text-blue-facebook {
+.text-blue-facebook {
 	color: #266dbf;
 }
 
-.feeds-page #form-seach {
+#form-seach {
 	width: 30%;
 }
 
-.feeds-page #profile {
+#profile {
 	width: 70%
 }
 
-.feeds-page .content-theme {
+.content-theme {
 	background-color: #dddddd;
 }
 
-.feeds-page #feeds-discovery .active {
+.border-orange {
+	width: 100px;
+	border-color: #cc8408 !important;
+}
+
+.border-orange.active {
+	color: white;
+	/*background-color: linear-gradient(45deg, #f9cb7a, #f4a418, #c17b01);*/
+	background-color: #f4a418;
+}
+
+.feeds-page #feeds-discovery .active,
+.discovery-page #feeds-discovery .active {
 	color: #266dbf;
 	font-weight: bold;
 }
 
-.feeds-page #modes .active {
+.feeds-page #modes .active,
+.discovery-page #modes .active {
 	color: white;
 	background-color: #266dbf;
 }
