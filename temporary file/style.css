@@ -92,6 +92,21 @@
 	top: 5px;
 }
 
+.cancel-icon {
+	left: 130px;
+	top: 0px;
+}
+
+.album {
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+	margin: auto;
+}
+
+.horizontal-break {
+	border: 2px solid rgba(0,0,0,.1);
+}
+
 .public-profile-tab-photos-page .img,
 .my-profile-tab-photos-page .img {
 	max-height: 300px;
@@ -126,4 +141,12 @@
 
 .public-profile-tab-follower-page .card small {
 	color: #266dbf;
+}
+
+.edit-user-profile-page .change-btn {
+	background-color: rgba(255,255,255,0.5);
+	position: absolute;
+	top: 75%;
+	left: 46%;
+	width: 100px;
 }

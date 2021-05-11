@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Fotobook</title>
+  </head>
+  <body>
+    <div id="edit-user-profile-page" class="edit-user-profile-page">
+      <div class="container-fluid navbar-theme">
+        <div class="navbar navbar-expand-lg">
+          <a class="navbar-brand text-white font-weight-bold ml-5" href="#">Fotobook</a>
+          <form class="form-inline" id="form-seach">
+            <input class="form-control w-100" type="search" id="search" name="search" placeholder="Search Photo/ Album">
+          </form>
+          <div class="collapse navbar-collapse row">
+            <div class="col-9 text-right">
+              <img src="external-content.duckduckgo.com.jpg" class="rounded-circle" width="50px" height="50px">
+              <span class="h5 text-white font-weight-bold ml-2">Hieu Nguyen</span>
+            </div>
+            <div class=" col-3 text-center">
+              <button type="button" class="btn text-white font-weight-bold">Logout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid content content-theme vw-100 vh-100 pt-2">
+        <div class="row h-100">
+          <div class="col-2 text-center">
+            <div class="list-group" id="feeds-discovery">
+              <a href="#" class="list-group-item list-group-item-action bg-transparent border-0">Feeds</a>
+              <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 active">Discovery</a>
+            </div>
+          </div>
+          <div class="col-8 bg-white">
+            <div class="d-flex justify-content-between mt-4">
+              <h5 class="font-weight-bold">Edit User Profile</h5>
+              <button class="btn navbar-theme text-white">Back</button>
+            </div>
+            <hr class="horizontal-break">
+            <div class="text-center">
+              <div class="position-relative">
+                <img src="external-content.duckduckgo.com.jpg" width="150px" height="150px">
+                <button type="button" class="btn change-btn">Change</button>
+              </div>
+              <div class="mb-5">
+                <div class="row">
+                  <div class="col-5"></div>
+                  <div class="col-7">
+                    <h5 class="my-3 font-weight-bold text-blue-facebook float-left">Basic Information</h5>
+                  </div>
+                </div>
+                <form>
+                  <div class="form-group row">
+                    <div class="col-5">
+                      <label for="first-name" class="float-right col-form-label">First Name</label>
+                    </div>
+                    <div class="col-7">
+                      <input type="text" name="first-name" class="form-control mb-2 w-50" id="first-name" placeholder="First Name">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-5">
+                      <label for="last-name" class="float-right col-form-label">Last Name</label>
+                    </div>
+                    <div class="col-7">
+                      <input type="text" name="last-name" class="form-control mb-2 w-50" id="last-name" placeholder="Last Name">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-5">
+                      <label for="email" class="float-right col-form-label">Email</label>
+                    </div>
+                    <div class="col-7">
+                      <input type="email" name="email" class="form-control mb-2 w-50" id="email" placeholder="Example@example.com">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-5"></div>
+                    <div class="col-7">
+                      <button type="button" class="btn btn-success mt-2 float-left">Save</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="mt-5">
+                <div class="row">
+                  <div class="col-5"></div>
+                  <div class="col-7">
+                    <h5 class="my-3 font-weight-bold text-blue-facebook float-left">Password</h5>
+                  </div>
+                </div>
+                <form>
+                  <div class="form-group row">
+                    <div class="col-5">
+                      <label for="current-password" class="float-right col-form-label">Current Password</label>
+                    </div>
+                    <div class="col-7">
+                      <input type="password" name="current-password" class="form-control mb-2 w-50" id="current-password" placeholder="*******">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-5">
+                      <label for="new-password" class="float-right col-form-label">New Password</label>
+                    </div>
+                    <div class="col-7">
+                      <input type="password" name="new-password" class="form-control mb-2 w-50" id="new-password" placeholder="*******">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-5">
+                      <label for="confirm-password" class="float-right col-form-label">Password Confirmation</label>
+                    </div>
+                    <div class="col-7">
+                      <input type="password" name="confirm-password" class="form-control mb-2 w-50" id="confirm-password" placeholder="*******">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-5"></div>
+                    <div class="col-7">
+                      <button type="button" class="btn btn-success mt-2 float-left">Save</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>  
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src=""></script>
+  </body>
+</html>
