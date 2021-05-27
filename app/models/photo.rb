@@ -4,5 +4,7 @@ class Photo < ApplicationRecord
 	validate :sharing_mode, presence: true
 	
 	enum sharing_mode: [:public, :private]
+	has_many :likes, as: :liked_on
+	belongs_to :user
 	has_one_attached :image
 end

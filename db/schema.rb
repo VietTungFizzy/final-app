@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_27_013011) do
+ActiveRecord::Schema.define(version: 2021_05_27_041028) do
 
   create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -46,13 +46,18 @@ ActiveRecord::Schema.define(version: 2021_05_27_013011) do
     t.integer "sharing_mode", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_albums_on_user_id"
   end
 
-  create_table "albums_photos", id: false, charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.bigint "album_id"
-    t.bigint "photo_id"
-    t.index ["album_id"], name: "index_albums_photos_on_album_id"
-    t.index ["photo_id"], name: "index_albums_photos_on_photo_id"
+  create_table "likes", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "liked_on_id"
+    t.string "liked_on_type"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["liked_on_type", "liked_on_id"], name: "index_likes_on_liked_on_type_and_liked_on_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "photos", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -63,6 +68,12 @@ ActiveRecord::Schema.define(version: 2021_05_27_013011) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_photos_on_user_id"
+  end
+
+  create_table "relationships", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "follower_id"
+    t.integer "followed_id"
+    t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   end
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -84,4 +95,5 @@ ActiveRecord::Schema.define(version: 2021_05_27_013011) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "albums", "users"
 end
