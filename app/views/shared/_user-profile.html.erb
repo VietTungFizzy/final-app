@@ -1,0 +1,35 @@
+<div class="d-flex profile">
+  <% avatar_generate_url = "https://ui-avatars.com/api/?name=" + user.first_name + "+" + user.last_name %>
+  <%= image_tag( user.avatar.file.nil? ? avatar_generate_url : user.avatar.url, size: "150x150", class: "rounded-circle") %>
+  <%= content_tag :div, class: "d-flex flex-column ms-3", id: user.id do %>
+    <% if type == "private_profile" %>
+      <%= link_to 'Edit Profile', edit_user_registration_path , class: 'btn rounded-pill fw-bold edit-profile-btn' %>
+    <% elsif type == "public_profile" %>
+      <% if !is_following %>
+        <%= button_tag 'Follow', class: "btn border-orange rounded-pill fw-bold", id: "follow-btn", data: {user_id: user.id, following_action: 'follow'}, disabled: !user_signed_in?   %>
+      <% else %>
+        <%= button_tag 'Unfollow', class: "btn border-orange rounded-pill fw-bold active", id: "follow-btn", data: {user_id: user.id, following_action: 'unfollow' }, disabled: !user_signed_in? %>
+      <% end %>
+    <% end %>
+    <h1 class="fw-bold">
+      <%= user.first_name + " " + user.last_name %>
+    </h1>
+    <div class="d-flex stats">
+      <%= content_tag :span, class: current_view == "photo" ? "active" : nil do %>
+        <%= photos_count %> <%= content_tag :small, 'PHOTOS' ,class: current_view == "photo" ? "active" : nil %>
+      <% end %> 
+      <span class="mx-2">|</span>
+      <%= content_tag :span, class: current_view == "album" ? "active" : nil do %>
+        <%= albums_count %> <%= content_tag :small, 'ALBUMS' ,class: current_view == "album" ? "active" : nil %>
+      <% end %>
+      <span class="mx-2">|</span>
+      <%= content_tag :span, class: current_view == "following" ? "active" : nil do %>
+        <%= followings_count %> <%= content_tag :small, 'FOLLOWINGS' ,class: current_view == "following" ? "active" : nil %>
+      <% end %>
+      <span class="mx-2">|</span>
+      <%= content_tag :span, class: current_view == "follower" ? "active" : nil do %>
+        <%= followers_count %> <%= content_tag :small, 'FOLLOWERS' ,class: current_view == "follower" ? "active" : nil %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

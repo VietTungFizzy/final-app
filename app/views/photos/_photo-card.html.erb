@@ -1,0 +1,35 @@
+<%= content_tag :div, class: "col-6", id: "post-#{photo.id}" do %>
+  <div class="shadow card mt-2">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <%= image_tag photo.image.thumb.url, class: "card-img" %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body h-100 d-flex flex-column justify-content-between">
+          <div>
+            <div class="card-title">
+              <% avatar_generate_url = "https://ui-avatars.com/api/?name=" + user.first_name + "+" + user.last_name %>
+              <%= image_tag( user.avatar.file.nil? ? avatar_generate_url : user.avatar.url, size: "50x50", class: "rounded-circle") %>
+              <span class="text-blue-facebook fw-bold ml-2"><%= user.first_name + " " + user.last_name %></span>  
+            </div>
+            <%= content_tag :h5, truncate(photo.title, length: 27, separator: ' '), class: "card-title fw-bold" %>
+            <%= content_tag :p, truncate(photo.title, length: 187, separator: ' '), class: "card-text card-content" %>
+          </div>
+          <div>
+            <div class="d-flex justify-content-between">
+              <%= content_tag :div, class: "card-text", id: "like-btn", data: {photo_id: photo.id, like_action: 'like'} do %>
+                <% if Like.exists?(user_id: current_user.id, liked_on_id: photo.id, liked_on_type: "Photo") %>
+                  <i class="far fa-heart text-blue-facebook"></i>
+                <% else %>
+                  <i class="fas fa-heart text-blue-facebook"></i>
+                <% end %>
+                <span class="text-blue-facebook"><%= Like.where(liked_on_id: photo.id, liked_on_type: "Photo").count %></span>  
+              <% end %>
+              <p class="card-text"><small class="text-muted"><%= photo.created_at %></small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

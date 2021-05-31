@@ -1,0 +1,20 @@
+<div class="col-2 text-center">
+  <%= render "/shared/user-sidebar" %>
+</div>
+<div class="col-8 bg-white">
+  <div class="private-profile" id="private-profile">
+    <%= render "shared/user-profile", type: "private_profile", current_view: "album", photos_count: @photos_count, albums_count: @albums_count, followings_count: @followings_count, followers_count: @followers_count %>
+    <div class="add-photo-div">
+      <%= link_to 'Add Album', new_album_path, class: "btn btn-success float-end" %>
+    </div>
+    <div class="row">
+      <%= @albums.each do |a| %>
+        <%= render "album", album: a, type: "private_profile" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="col-2"></div>
+
+<%= render "shared/modal", type: "album" %>
+<%= javascript_pack_tag 'album-modal.js' %>

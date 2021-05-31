@@ -1,0 +1,11 @@
+<div class="col-2 text-center">
+  <%= render "/shared/user-sidebar" %>
+</div>
+<div class="col-8 bg-white">
+  <div class="album-new-page" id="album-new-page">
+    <%= render 'form', form_title: "New Album", album: @albums, is_edit: false %>
+  </div>
+</div>
+<div class="col-2"></div>
+
+<%= javascript_pack_tag 'upload-image-form.js' %>

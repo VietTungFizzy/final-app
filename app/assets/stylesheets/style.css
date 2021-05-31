@@ -1,0 +1,160 @@
+#back-btn,
+.navbar-theme  {
+	background-color: #266dbf;
+}
+
+.btn.text-blue-facebook,
+.text-blue-facebook {
+	color: #266dbf;
+}
+
+#modes .active {
+	color: white;
+	background-color: #266dbf;
+}
+
+
+#form-seach {
+	width: 30%;
+}
+
+#profile {
+	width: 70%
+}
+
+.content-theme {
+	background-color: #dddddd;
+}
+
+.sidebar {
+	font-weight: bold;
+	color: #a3a1a3;
+}
+
+
+#user-sidebar .active {
+	color: #266dbf;
+}
+
+.cancel-icon {
+	left: 90%;
+	top: 0px;
+}
+
+.cancel-icon:hover {
+	cursor: pointer;
+}
+
+.profile span {
+	font-size: 25px;
+}
+
+.profile small {
+	font-size: 14px;
+}
+
+.profile {
+	padding-left: 30px;
+	padding-top: 50px;
+}
+
+.btn.edit-profile-btn {
+	border: 3px solid #266dbf;
+	color: #266dbf;
+	width: 150px;
+}
+
+.horizontal-break {
+	border: 2px solid rgba(0,0,0,.1);
+}
+
+.edit-profile-btn {
+	border: 3px solid #266dbf;
+	color: #266dbf;
+	width: 150px;
+}
+
+.add-photo-btn {
+	width: 200px;
+	height: 200px;
+	background-color: #9fa09d;
+	border: 2px dashed #dddddd;
+}
+
+.photo-new-page .plus-color {
+	color: #c1c4be;
+}
+
+.profile .stats .active {
+	color: #266dbf;
+	font-weight: bold;
+}
+
+.add-photo-div {
+	height: 40px;
+}
+
+#private-icon {
+	width: 32px;
+	height: 32px;
+	background-color: white;
+	border-radius: 50%;
+	left: 85%;
+	top: 5px;
+}
+
+.img {
+	max-height: 300px;
+	max-width: 300px;
+	height: 100%;
+	width: 100%;
+}
+
+.image-stacked {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	max-height: 100%;
+}
+
+.image-stacked:nth-child(1) {
+	transform: rotate(8deg)
+}
+
+.image-stacked:nth-child(2) {
+	transform: rotate(5deg)
+}
+
+.image-stacked:last-child {
+	position: relative;
+}
+
+.btn.border-orange {
+	width: 110px;
+	border: 3px solid #cc8408;
+}
+
+.border-orange.active {
+	color: white;
+	background-color: #f4a418;
+}
+
+.album-description {
+	width: 110px;
+	height: 110px;
+	background-color: rgba(79,80,84,0.6);
+	border-radius: 50%;
+	top: 30%;
+	left: 35%;
+	color: white;
+}
+
+.private-profile .bottom-right-pos {
+	top: 70%;
+	left: 70%;
+}
+
+.private-profile .edit-album-btn,
+.private-profile .edit-photo-btn {
+	background-color: rgba(0,0,0,0.25);
+}

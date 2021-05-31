@@ -1,0 +1,16 @@
+<div class="col-2 text-center">
+  <%= render "/shared/user-sidebar" %>
+</div>
+<div class="col-8 bg-white">
+  <div class="private-profile" id="private-profile">
+    <%= render "shared/user-profile", type: "public_profile", current_view: "follower", photos_count: @photos_count, albums_count: @albums_count, followings_count: @followings_count, followers_count: @followers_count, user: @user, is_following: @is_following %>
+    <div class="row mt-5">
+      <%= @follower_users.each do |u| %>
+        <%= render "follower", user: u, is_following: Relationship.exists?(follower_id: current_user.id, followed_id: u.id), photos_count: u.photos.count, albums_count: u.albums.count %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="col-2"></div>
+
+<%= javascript_pack_tag 'follow-feature.js' %>

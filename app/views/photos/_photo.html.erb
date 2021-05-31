@@ -1,0 +1,23 @@
+<% if type == "private_profile" %>
+	<%= content_tag :div, class: "col-3 mt-3 text-center post", id: "#{photo.id}" do %>
+	    <div class="card mt-3 border-0">
+	      	<%= image_tag photo.image.thumb.url, class: "img", size: "300x300" %>
+	      	<% if photo.sharing_mode == "private_mode" %>
+		      	<div class="card-img-overlay d-flex justify-content-center align-items-center" id="private-icon">
+		        	<i class="fas fa-lock"></i>
+		      	</div>
+	      	<% end %>
+	      	<div class="card-img-overlay bottom-right-pos">
+	            <%= link_to 'Edit', edit_photo_path(photo.id), class: "btn edit-photo-btn rounded-pill" %>
+	        </div>
+	      	<%= content_tag :p, truncate(photo.title, length: 20, separator: ' ') %>
+	    </div>
+	<% end %>
+<% elsif type == "public_profile" %>
+	<%= content_tag :div, class: "col-3 mt-3 text-center post", id: "#{photo.id}" do %>
+	    <div class="card mt-3 border-0">
+	      	<%= image_tag photo.image.thumb.url, class: "img" %>
+	      	<%= content_tag :p, truncate(photo.title, length: 20, separator: ' ') %>
+	    </div>
+	<% end %>
+<% end %>

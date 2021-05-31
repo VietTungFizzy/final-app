@@ -1,10 +1,12 @@
 class Photo < ApplicationRecord
-	validate :name, presence: true, length: { maximum: 140 }
-	validate :description, presence: true, length: { maximum: 300 }
-	validate :sharing_mode, presence: true
-	
-	enum sharing_mode: [:public, :private]
+	enum sharing_mode: {public_mode: 0, private_mode: 1}
 	has_many :likes, as: :liked_on
 	belongs_to :user
-	has_one_attached :image
+	belongs_to :album
+	mount_uploader :image, ImageUploader
+
+	validates :title, presence: true, length: { maximum: 140 }
+	validates :description, presence: true, length: { maximum: 300 }
+	validates :sharing_mode, presence: true
+	validates :image, presence: true ,file_size: { less_than: 5.megabytes }
 end

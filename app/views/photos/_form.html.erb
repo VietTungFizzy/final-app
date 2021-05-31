@@ -1,0 +1,59 @@
+<div class="mt-4 mb-3">
+  <% if photo.new_record? == false %>
+    <div class="d-flex justify-content-between">
+      <h5 class="font-weight-bold"><%= form_title %></h5>
+      <%= link_to "Back", photos_path, class: "btn navbar-theme text-white", id: "back-btn" %>
+    </div>
+  <% else %>
+    <h5 class="font-weight-bold"><%= form_title %></h5>
+  <% end %>
+</div>
+<hr class="horizontal-break">
+<%= form_with model: photo ,html: {class: 'photo-form', id: "photo-form"} do |form| %>
+  <div class="row">
+    <div class="col-6">
+      <div class="mb-3">
+        <%= form.label :title, "Title", class: 'fw-bold' %>
+        <%= form.text_field :title, value: photo.new_record? ? nil : photo.title ,class: "w-100", placeholder: "Photo Title"%>
+      </div>
+      <div class="mb-3">
+        <%= form.label :sharing_mode, "Sharing Mode", class: 'fw-bold w-100' %>
+        <%= form.select :sharing_mode, options_for_select([["Public", "public_mode"], ["Private", "private_mode"]], photo.new_record? ? "public_mode" : photo.sharing_mode), {}, {class: "w-25"} %>
+      </div>
+      <div class="mb-3" id="image-area">
+        <div class="d-flex">
+          <% if photo.new_record? %>
+            <%= button_tag nil, class: "add-photo-btn rounded", type: "upload-image", id: "upload-image-btn" do %>
+              <i class="fas fa-plus fa-3x plus-color"></i>
+            <% end %>
+          <% else %>
+              <div class="position-relative">
+                <%= image_tag photo.image.url, size: "200x200" %>
+                <div class="position-absolute cancel-icon">
+                  <i class="fas fa-times"></i>
+                </div>
+              </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="mb-3">
+        <%= form.file_field :image, class: 'invisible' %>
+        <%= hidden_field_tag 'file-size' %>
+      </div>
+      <div class="mb-3">
+        <%= form.submit 'Save', {class: "btn btn-success", data: {disable_with: false}} %>
+        <% if photo.new_record? == false %>
+          <%= link_to photo_path(photo), method: :delete, class: "btn btn-danger ms-5", id: "delete-btn", data: { confirm: "Are you sure?" } do %>
+            <i class="fas fa-trash-alt"></i> Delete
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-6">
+      <div>
+        <%= form.label :description, "Description", class: 'fw-bold' %>
+        <%= form.text_area :description, rows: 5, class: "w-100", value: photo.new_record? ? nil : photo.description, placeholder: "Photo Description" %>
+      </div>
+    </div>
+  </div>
+<% end %>

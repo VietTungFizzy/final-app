@@ -1,0 +1,31 @@
+<div class="container-fluid navbar-theme">
+  <div class="navbar navbar-expand-lg">
+    <% if user_signed_in? && current_user.admin? %>
+      <%= link_to "Fotobook Admin", '/admin/photos', class: "navbar-brand text-white fw-bold ml-5" %>
+    <% else %>
+      <%= link_to "Fotobook", root_path, class: "navbar-brand text-white fw-bold ml-5" %>
+    <% end %>
+    <%= form_with html: {class: "form-inline w-25", id: "form-search"} do |form| %>
+      <%= search_field_tag 'search', nil, class: "form-control", placeholder: "Search Photo/ Album" %>
+    <% end %>
+    <div class="collapse navbar-collapse row">
+      <% if user_signed_in? %>
+        <div class="col-9 text-end">
+          <% avatar_generate_url = "https://ui-avatars.com/api/?name=" + current_user.first_name + "+" + current_user.last_name %>
+          <%= image_tag( current_user.avatar.file.nil? ? avatar_generate_url : current_user.avatar.url, size: "50x50", class: "rounded-circle") %>
+          <span class="h5 text-white fw-bold ml-2">
+            <%= current_user.first_name + " " + current_user.last_name %>
+          </span>
+        </div>
+        <div class=" col-3 text-center">
+          <%= link_to 'Logout', destroy_user_session_path, method: "delete" ,class: "btn text-white fw-bold" %>
+        </div>
+      <% else %>
+        <div class="col-9"></div>
+        <div class="col-3 text-center">
+          <%= link_to 'Login', new_user_session_path ,class: "btn text-white fw-bold" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

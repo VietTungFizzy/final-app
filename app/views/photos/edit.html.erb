@@ -1,0 +1,11 @@
+<div class="col-2 text-center">
+  <%= render "/shared/user-sidebar" %>
+</div>
+<div class="col-8 bg-white">
+  <div class="photo-edit-page" id="photo-edit-page">
+    <%= render 'form', form_title: "Edit Photo", photo: @photo %>
+  </div>
+</div>
+<div class="col-2"></div>
+
+<%= javascript_pack_tag 'upload-image-form.js' %>

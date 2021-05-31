@@ -1,1 +1,20 @@
-<h1>PHOTOS</h1>
+<div class="col-2 text-center">
+  <%= render "/shared/user-sidebar" %>
+</div>
+<div class="col-8 bg-white">
+  <div class="private-profile" id="private-profile">
+    <%= render "shared/user-profile", type: "private_profile", current_view: "photo", photos_count: @photos_count, albums_count: @albums_count, followings_count: @followings_count, followers_count: @followers_count, user: @user %>
+    <div class="add-photo-div">
+      <%= link_to 'Add Photos', new_photo_path, class: "btn btn-success float-end" %>
+    </div>
+    <div class="row">
+      <%= @photos.each do |p| %>
+        <%= render "photo", photo: p, type: "private_profile" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="col-2"></div>
+
+<%= render "shared/modal", type: "photo" %>
+<%= javascript_pack_tag 'photo-modal.js' %>
