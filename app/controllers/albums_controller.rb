@@ -5,10 +5,6 @@ class AlbumsController < ApplicationController
 		@albums = Album.all
 	end
 
-	def cache
-
-	end
-
 	def index
 		@albums = Album.where(user_id: current_user.id)
 		@photos_count = Photo.where(user_id: current_user.id).count

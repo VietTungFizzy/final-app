@@ -1,8 +1,9 @@
 $(function() {
-	$('#like-btn').click(function(e) {
+	$('.like-btn').click(function(e) {
 		postId = $(this).data("postId");
 		actionLike = $(this).data('likeAction');
-		urlAction = `/like/${actionLike}/${postId}`;
+		modelType = $(this).data('modelType')
+		urlAction = `/likes/${modelType}/${actionLike}/${postId}`;
 		like($(this), urlAction, actionLike);
 	})
 })
@@ -14,15 +15,14 @@ function like(selectorButton, urlAction, actionLike) {
 		  dataType:"json",
 		  data: {},
 		  success:function(result){
-		  	if (actionLike == 'follow') {
-				$(selectorButton).addClass("active")
-				$(selectorButton).text("Unfollow")
-				$(selectorButton).data('followingAction', 'unfollow')
+		  	if (actionLike == 'like') {
+				$(selectorButton).children('i').removeClass("far").addClass("fas")
+				$(selectorButton).data('likeAction', 'unlike')
 		  	} else {
-		  		$(selectorButton).removeClass("active")
-				$(selectorButton).text("Follow")
-				$(selectorButton).data('followingAction', 'follow')
+				$(selectorButton).children('i').removeClass("fas").addClass("far")
+				$(selectorButton).data('likeAction', 'like')
 		  	}
+		  	$(selectorButton).children('#like-count-text').text(result)
 		  }
 		})
 }

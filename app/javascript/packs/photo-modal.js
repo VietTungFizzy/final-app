@@ -1,5 +1,6 @@
 $(function() {
 	$(".post").click(function(e) {
+		console.log(e)
 		const path = `photos/${e.currentTarget.id}`
 		$.ajax({
 		  type:"GET",

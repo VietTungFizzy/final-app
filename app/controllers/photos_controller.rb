@@ -7,7 +7,6 @@ class PhotosController < ApplicationController
 
 	def feed
 		@photos = Photo.includes(:user).where(user_id: Relationship.where(follower_id: current_user.id).pluck(:followed_id))
-		logger.debug(@photos)
 	end
 
 	def index

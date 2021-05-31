@@ -1,0 +1,18 @@
+<div class="col-2 text-center">
+  <%= render "/shared/user-sidebar" %>
+</div>
+<div class="col-8 bg-white">
+  <div class="feed" id="feed">
+    <%= render "shared/photo-album-navigation" %>
+    <div class="row">
+      <%= @photos.each do |p| %>
+        <%= render "photo-card", photo: p, user: User.find(p.user_id) %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="col-2"></div>
+
+<%= render "shared/modal", type: "photo" %>
+<%= javascript_pack_tag 'photo-modal.js' %>
+<%= javascript_pack_tag 'like-feature.js' %>

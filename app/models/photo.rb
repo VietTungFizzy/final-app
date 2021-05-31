@@ -2,7 +2,7 @@ class Photo < ApplicationRecord
 	enum sharing_mode: {public_mode: 0, private_mode: 1}
 	has_many :likes, as: :liked_on
 	belongs_to :user
-	belongs_to :album
+	belongs_to :album, optional: true
 	mount_uploader :image, ImageUploader
 
 	validates :title, presence: true, length: { maximum: 140 }
